@@ -4,22 +4,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: auto auto;
+  max-height: auto;
+  max-width: auto;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+  
 }
-
 .container {
-  border: 2px solid #dedede;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px 0;
+  border: 0.5px solid grey;
+  background-color: #383838;
+  border-radius: 0px;
+  padding: 100px;
+  margin: 50px 100px; 
+  box-shadow: 0 0 50px gray; 
+  
 }
 
 .darker {
   border-color: #ccc;
-  background-color: #ddd;
+  background-color: navy;
 }
 
 .container::after {
@@ -49,56 +55,62 @@ body {
 
 .time-left {
   float: left;
-  color: #999;
+  color: navy;
 }
 </style>
 </head>
 <body>
 
 <div align="center">
-    <h2>Django Chat</h2>
+    <h2>ONGO Chat</h2>
 </div>
 
-
-<div class="container">
+<div 
+    class="container">
     <style>
     input[type=text], select {
     width: 100%;
-    padding: 12px 20px;
+    padding: 8px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 25px;
     box-sizing: border-box;
+    font-size: large;
+
+    
+    
     }
 
     input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    font-size: large;
+    font-weight: 500;
+    background-color:navy;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 14px 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 45px;
     cursor: pointer;
     }
 
     input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: grey;
     }
 
     div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: black;
+    font-size: xx-large;
+    padding: 10px;
     }
     </style>
 
     <form id="post-form" method="POST" action="checkview">
         {% csrf_token %}
-        <label>Room Name</label>
+        <label> Server Name</label>
         <input type="text" name="room_name" id="room_name" width="100px" />
-        <label>Username</label>
+        <label> Username</label>
         <input type="text" name="username" id="username" width="100px" />
         <input type="submit" value="Enter Room">
     </form>
