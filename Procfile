@@ -1,0 +1,1 @@
+web: gunicorn Ongochat.wsgi --log-file -
